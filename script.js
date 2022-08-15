@@ -29,7 +29,8 @@ let numberBtns = document.getElementsByClassName('calcBtn');
 for (let i = 0; i < numberBtns.length; i++) {
   let numberBtn = numberBtns[i];
   numberBtn.onclick = function() {
-    console.log(this.textContent)
+    let input = this.textContent
+    result.append(input)
   }
 }
 
