@@ -22,3 +22,14 @@ const operate = function(operator, num1, num2) {
    let output =  operator(num1, num2)
    return output
 }
+
+const result = document.getElementById('result');
+let numberBtns = document.getElementsByClassName('calcBtn');
+
+for (let i = 0; i < numberBtns.length; i++) {
+  let numberBtn = numberBtns[i];
+  numberBtn.onclick = function() {
+    console.log(this.textContent)
+  }
+}
+
