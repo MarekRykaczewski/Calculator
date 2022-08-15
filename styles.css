@@ -4,21 +4,26 @@
     border: 1px solid black;
     gap: 10px;
     width: 300px;
-    height: 300px;
+    height: 400px;
     align-items: center;
     justify-content: center;
 }
 
 #display {
     background-color: aquamarine;
-    width: 200px;
+    width: 230px;
     height: 50px;
 }
 
 #row {
     display: flex;
     flex-direction: row;
-    gap: 10px
+    gap: 10px;
+    width: 230px;
+}
+
+#bigbutton {
+    width: 115px;
 }
 
 button {
