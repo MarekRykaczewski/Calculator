@@ -24,7 +24,9 @@ const operate = function(operator, num1, num2) {
 }
 
 const result = document.getElementById('result');
-let numberBtns = document.getElementsByClassName('calcBtn');
+let numberBtns = document.getElementsByClassName('calcNumBtn');
+let operatorBtns = document.getElementsByClassName('calcOpBtn');
+
 
 for (let i = 0; i < numberBtns.length; i++) {
   let numberBtn = numberBtns[i];
@@ -34,3 +36,11 @@ for (let i = 0; i < numberBtns.length; i++) {
   }
 }
 
+for (let i = 0; i < operatorBtns.length; i++) {
+  let operatorBtn = operatorBtns[i];
+  operatorBtn.onclick = function() {
+  let firstNum = result.textContent
+  console.log(firstNum)
+  result.innerHTML = '';
+  }
+}
