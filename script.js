@@ -27,6 +27,10 @@ const result = document.getElementById('result');
 let numberBtns = document.getElementsByClassName('calcNumBtn');
 let operatorBtns = document.getElementsByClassName('calcOpBtn');
 
+let firstNum = 0
+let secondNum = 0
+let operator
+
 
 for (let i = 0; i < numberBtns.length; i++) {
   let numberBtn = numberBtns[i];
@@ -35,17 +39,15 @@ for (let i = 0; i < numberBtns.length; i++) {
     result.append(input)
       if (firstNum) {
     secondNum = Number(result.textContent)
+  } else {
+    firstNum = Number(result.textContent)
   }
-  firstNum = Number(result.textContent)
+  
   console.log(firstNum)
   console.log(secondNum)
   
   }
 }
-
-let firstNum = 0
-let secondNum = 0
-let operator
 
 for (let i = 0; i < operatorBtns.length; i++) {
   let operatorBtn = operatorBtns[i];
@@ -60,7 +62,12 @@ for (let i = 0; i < operatorBtns.length; i++) {
 let equalsBtn = document.getElementById('equalsbutton')
 
 equalsBtn.onclick = function() {
-  operator = window[operator]
-  let output = operate(operator,firstNum, secondNum)
+  let output
+  if (operator == 'add') {
+    output = operate(add, firstNum, secondNum)
+  } else if (operator == 'subtract') {
+    output = operate(subtract, firstNum, secondNum)
+  }
+  
   console.log(output)
 }
