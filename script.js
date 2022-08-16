@@ -33,14 +33,34 @@ for (let i = 0; i < numberBtns.length; i++) {
   numberBtn.onclick = function() {
     let input = this.textContent
     result.append(input)
+      if (firstNum) {
+    secondNum = Number(result.textContent)
+  }
+  firstNum = Number(result.textContent)
+  console.log(firstNum)
+  console.log(secondNum)
+  
   }
 }
+
+let firstNum = 0
+let secondNum = 0
+let operator
 
 for (let i = 0; i < operatorBtns.length; i++) {
   let operatorBtn = operatorBtns[i];
   operatorBtn.onclick = function() {
-  let firstNum = result.textContent
-  console.log(firstNum)
-  result.innerHTML = '';
+    operator = this.getAttribute('id');
+    console.log(operator)
+    result.innerHTML = '';
+
   }
+}
+
+let equalsBtn = document.getElementById('equalsbutton')
+
+equalsBtn.onclick = function() {
+  operator = window[operator]
+  let output = operate(operator,firstNum, secondNum)
+  console.log(output)
 }
