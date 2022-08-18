@@ -64,11 +64,11 @@ equalsBtn.onclick = function() {
   if (operator == 'add') {
     output = operate(add, firstNum, secondNum)
   } else if (operator == 'subtract') {
-    output = operate(subtract, firstNum, secondNum)
+    output = operate(subtract, secondNum, firstNum)
   } else if (operator == 'multiply') {
     output = operate(multiply, firstNum, secondNum)
   } else if (operator == 'divide') {
-    output = operate(divide, firstNum, secondNum)
+    output = operate(divide, secondNum, firstNum)
   }
 
   
