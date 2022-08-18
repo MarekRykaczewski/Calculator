@@ -38,7 +38,7 @@ let operatorBtns = document.getElementsByClassName('calcOpBtn');
 let firstNum = 0
 let secondNum = 0
 let operator
-let chain = true
+let chain = 0
 
 
 for (let i = 0; i < numberBtns.length; i++) {
@@ -47,7 +47,7 @@ for (let i = 0; i < numberBtns.length; i++) {
     let input = this.textContent
     result.append(input)
     firstNum = Number(result.textContent)
-    if (secondNum) {
+    if (chain > 1) {
       if (operator == 'add') {
         output = operate(add, firstNum, secondNum)
       } else if (operator == 'subtract') {
@@ -72,6 +72,7 @@ for (let i = 0; i < numberBtns.length; i++) {
 for (let i = 0; i < operatorBtns.length; i++) {
   let operatorBtn = operatorBtns[i];
   operatorBtn.onclick = function() {
+    chain ++
     secondNum = firstNum
     operator = this.getAttribute('id');
     console.log(operator)
@@ -84,7 +85,6 @@ let equalsBtn = document.getElementById('equalsbutton')
 
 equalsBtn.onclick = function() {
   let output
-  chain = false
   if (operator == 'add') {
     output = operate(add, firstNum, secondNum)
   } else if (operator == 'subtract') {
