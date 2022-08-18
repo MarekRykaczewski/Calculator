@@ -23,6 +23,14 @@ const operate = function(operator, num1, num2) {
    return output
 }
 
+const clearBtn = document.getElementById('clearbutton');
+
+clearBtn.onclick = function() {
+  result.innerHTML='';
+  firstNum = 0;
+  secondNum = 0;
+}
+
 const result = document.getElementById('result');
 let numberBtns = document.getElementsByClassName('calcNumBtn');
 let operatorBtns = document.getElementsByClassName('calcOpBtn');
