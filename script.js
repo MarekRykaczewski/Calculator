@@ -37,11 +37,8 @@ for (let i = 0; i < numberBtns.length; i++) {
   numberBtn.onclick = function() {
     let input = this.textContent
     result.append(input)
-      if (firstNum) {
-    secondNum = Number(result.textContent)
-  } else {
     firstNum = Number(result.textContent)
-  }
+ 
   
   console.log(firstNum)
   console.log(secondNum)
@@ -52,6 +49,7 @@ for (let i = 0; i < numberBtns.length; i++) {
 for (let i = 0; i < operatorBtns.length; i++) {
   let operatorBtn = operatorBtns[i];
   operatorBtn.onclick = function() {
+    secondNum = firstNum
     operator = this.getAttribute('id');
     console.log(operator)
     result.innerHTML = '';
@@ -67,7 +65,12 @@ equalsBtn.onclick = function() {
     output = operate(add, firstNum, secondNum)
   } else if (operator == 'subtract') {
     output = operate(subtract, firstNum, secondNum)
+  } else if (operator == 'multiply') {
+    output = operate(multiply, firstNum, secondNum)
+  } else if (operator == 'divide') {
+    output = operate(divide, firstNum, secondNum)
   }
+
   
   console.log(output)
 }
