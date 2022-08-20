@@ -57,11 +57,21 @@ class Calculator {
     this.currentOperand = computation
     this.operation = undefined
     this.previousOperand = ''
+}
 
+  getDisplayNumber(number) {
+    const floatNumber = parseFloat(number)
+    if (isNan(floatNumber)) return ''
+    return number.toLocaleString('en')
   }
 
   updateDisplay() {
-    this.currentOperandTextElement.innerText = this.currentOperand
+    this.currentOperandTextElement.innerText = 
+      this.getDisplayNumber(this.chooseOperand)
+    if (this.operation != null) {
+      this.previousOperandTextElement.innerText = 
+      `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+    }
     this.previousOperandTextElement.innerText = this.previousOperand
 
   }
