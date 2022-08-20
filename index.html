@@ -11,40 +11,43 @@
 
 <div id="container">
 <div id="display">
-    <p id="result"></p>
+    <div id="result">
+        <div class="previous-operand"></div>
+        <div class="current-operand"></div>
+    </div>
 </div>
 
 <div id="row">
-    <button class="bigbutton" id="clearbutton">Clear</button>
-    <button class="bigbutton" id="equalsbutton">Equals</button>
+    <button data-delete class="bigbutton">Clear</button>
+    <button date-equals class="bigbutton">Equals</button>
 </div>
 
 <div id="row">
-    <button class="calcNumBtn">7</button>
-    <button class="calcNumBtn">8</button>
-    <button class="calcNumBtn">9</button>
-    <button class="calcOpBtn" id="divide">/</button>
+    <button data-number class="calcNumBtn">7</button>
+    <button data-number class="calcNumBtn">8</button>
+    <button data-number class="calcNumBtn">9</button>
+    <button data-operation class="calcOpBtn">/</button>
 </div>
 
 <div id="row">
-    <button class="calcNumBtn">4</button>
-    <button class="calcNumBtn">5</button>
-    <button class="calcNumBtn">6</button>
-    <button class="calcOpBtn" id="multiply">x</button>
+    <button data-number class="calcNumBtn">4</button>
+    <button data-number class="calcNumBtn">5</button>
+    <button data-number class="calcNumBtn">6</button>
+    <button data-operation class="calcOpBtn">x</button>
 </div>
 
 <div id="row">
-    <button class="calcNumBtn">1</button>
-    <button class="calcNumBtn">2</button>
-    <button class="calcNumBtn">3</button>
-    <button class="calcOpBtn" id="subtract">-</button>
+    <button data-number class="calcNumBtn">1</button>
+    <button data-number class="calcNumBtn">2</button>
+    <button data-number class="calcNumBtn">3</button>
+    <button data-operation class="calcOpBtn">-</button>
 </div>
 
 <div id="row">
-    <button class="calcNumBtn">.</button>
-    <button class="calcNumBtn">0</button>
-    <button class="calcOpBtn"></button>
-    <button class="calcOpBtn" id = "add">+</button>
+    <button data-number class="calcNumBtn">.</button>
+    <button data-number class="calcNumBtn">0</button>
+    <button data-number class="calcOpBtn"></button>
+    <button data-operation class="calcOpBtn">+</button>
 </div>
 
 
